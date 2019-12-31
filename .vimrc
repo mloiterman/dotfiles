@@ -1,6 +1,8 @@
 " execute pathogen#infect()
-set mouse=
-set ttymouse=
+
+set mouse=a
+set ttymouse=xterm2
+
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
@@ -285,6 +287,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " https://github.com/nathanaelkane/vim-indent-guides/issues/20
 let g:indent_guides_exclude_filetypes = ['nerdtree']
+
+" Set mouse mode
+let g:NERDTreeMouseMode=2
+
+" Show hidden files and directories
+" let NERDTreeShowHidden=1
 " END NERDTree
 
 " START Airline
