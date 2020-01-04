@@ -33,6 +33,8 @@ endif
 " Resize splits when the window is resized
 au VimResized * :wincmd =
 
+set showcmd
+set cursorline
 set modelines=1
 set showmode
 set history=700
@@ -47,6 +49,9 @@ set shiftround
 set title
 set linebreak
 set colorcolumn=+1
+set number relativenumber
+set wildmode=longest,list,full
+set splitbelow splitright
 
 " Enable filetype plugins
 filetype plugin on
@@ -293,6 +298,7 @@ let g:NERDTreeMouseMode=2
 
 " Show hidden files and directories
 " let NERDTreeShowHidden=1
+nmap <C-f> :NERDTreeToggle<CR>
 " END NERDTree
 
 " START Airline
@@ -301,6 +307,7 @@ set laststatus=2
 let g:airline_theme='murmur'
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
+let g:airline_powerline_fonts = 1
 " END Airline
 
 " START windowswap
