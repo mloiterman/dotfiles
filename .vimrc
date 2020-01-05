@@ -1,11 +1,16 @@
 " Colors {{{
+set t_Co=256
 syntax enable           
 colorscheme darkblue
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 " }}}
 " Misc {{{
+set mouse=a
+set ttymouse=xterm2
 set clipboard=unnamed
 set encoding=UTF-8
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
 " }}}
 " Spaces & Tabs {{{
 set tabstop=4
@@ -53,9 +58,14 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug'
+Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+" }}}
+" NERDTree {{{
+let g:NERDTreeMouseMode=2
+nmap <C-f> :NERDTreeToggle<CR>
 " }}}
 " airline {{{
 " }}}
